@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero {
+  background-image: url("/debby1.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}

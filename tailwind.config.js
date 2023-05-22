@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       colors: {
         off: "#f371ff",
+        light: "rgb(209,213,219)",
+        dark: "rgb(36,36,36)",
       },
     },
     fontFamily: {

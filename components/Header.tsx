@@ -4,8 +4,29 @@ import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt4 } from "react-icons/hi";
 import Link from "next/link";
+import Logo from "./Logo";
 
 type Props = {};
+
+export const Mysocials = () => (
+  <>
+    <SocialIcon
+      url="https://twitter.com/devgeepy"
+      fgColor="gray"
+      bgColor="transparent"
+    />
+    <SocialIcon
+      url="https://www.linkedin.com/in/godspower-enwereuzor-4861571a2"
+      fgColor="gray"
+      bgColor="transparent"
+    />
+    <SocialIcon
+      url="https://instagram.com/devgeepy"
+      fgColor="gray"
+      bgColor="transparent"
+    />
+  </>
+);
 
 const Header = (props: Props) => {
   const [menu, setMenu] = useState(false);
@@ -16,9 +37,7 @@ const Header = (props: Props) => {
     <>
       <header className="sticky bg-[rgb(36,36,36)] top-0 flex flex-col  w-full z-20  px-3 py-4">
         <div className="flex justify-between ">
-          <div>
-            <p className="bg-off">Dcryptgirl</p>
-          </div>
+          <Logo />
           <motion.div
             initial={{
               x: -500,
@@ -35,26 +54,7 @@ const Header = (props: Props) => {
             }}
             className=""
           >
-            <SocialIcon
-              url="https://twitter.com/devgeepy"
-              fgColor="gray"
-              bgColor="transparent"
-            />
-            <SocialIcon
-              url="https://www.linkedin.com/in/godspower-enwereuzor-4861571a2"
-              fgColor="gray"
-              bgColor="transparent"
-            />
-            <SocialIcon
-              url="https://instagram.com/devgeepy"
-              fgColor="gray"
-              bgColor="transparent"
-            />
-            <SocialIcon
-              url="https://github.com/Geepytechnologies"
-              fgColor="gray"
-              bgColor="transparent"
-            />
+            <Mysocials />
           </motion.div>
           <ul className="text-gray-300 hidden  md:flex gap-9 text-[20px] items-center justify-center">
             <li>
@@ -67,7 +67,7 @@ const Header = (props: Props) => {
               <Link href="#contact">Contact</Link>
             </li>
             <li>
-              <Link href="https://geepy.hashnode.dev/">Blog</Link>
+              <Link href="/blog">Blog</Link>
             </li>
           </ul>
           <motion.div

@@ -25,15 +25,9 @@ const Contact = (props: Props) => {
   return (
     <div className=" relative flex flex-col space-y-3 text-center md:text-left max-w-full justify-evenly px-10 py-10 items-center">
       <h3 className="uppercase tracking-[15px] text-gray-500 text-2xl">
-        Contact Me
+        Get In Touch
       </h3>
-      <p className="text-[23px] font-[600]">
-        I have got just what you need. Let&apos;s talk
-      </p>
       <div className="space-y-4 text-[18px]">
-        <p className="flex gap-1 items-center">
-          <BsFillTelephoneFill /> +2348106974201
-        </p>
         <p className="flex gap-1 items-center">
           <AiOutlineMail />
           contact@dcryptgirl.net
@@ -69,7 +63,7 @@ const Contact = (props: Props) => {
         />
         <button
           type="submit"
-          className="bg-[#ac8063] mt-2 text-[20px] font-[600] rounded-sm py-3"
+          className="bg-off mt-2 text-[20px] font-[600] rounded-sm py-3"
         >
           Submit
         </button>

@@ -12,6 +12,7 @@ const Videos = (props: Props) => {
             <div className="shadow-xl rounded-md border-2 border-white">
               <img
                 className="rounded-md"
+                alt="gif"
                 src="https://media.giphy.com/media/c8JfOlMTJR9oO3Pb3Q/giphy.gif"
               />
             </div>
@@ -19,10 +20,12 @@ const Videos = (props: Props) => {
           <div className="flex flex-col ">
             <img
               className="shadow-xl rounded-md border-2 border-white"
+              alt="gif"
               src="https://media.giphy.com/media/f1bkbxz3FhZbWP3juR/giphy.gif"
             />
             <img
               className="shadow-xl rounded-md border-2 border-white"
+              alt="gif"
               src="https://media.giphy.com/media/f1bkbxz3FhZbWP3juR/giphy.gif"
             />
           </div>
@@ -31,7 +34,7 @@ const Videos = (props: Props) => {
               <img
                 className="rounded-md"
                 src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDQ0MDc4MmRiZmNlZDI1MzAyODhlNTViMmEyYjMwMDI5NWU1NjI5ZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/s6eOutRWheyZg41h3l/giphy.gif"
-                alt=""
+                alt="gif"
               />
             </div>
           </div>

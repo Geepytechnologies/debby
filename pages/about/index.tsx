@@ -37,16 +37,16 @@ const Index = (props: Props) => {
               <p>
                 With her expertise in blockchain technology, she has become a
                 go-to blockchain expert for those seeking to elevate their
-                projects or communities. Whether it's through creating engaging
-                content, building a strong community, managing project
+                projects or communities. Whether it&apos;s through creating
+                engaging content, building a strong community, managing project
                 complexities, or delivering captivating speeches, she brings a
                 unique blend of skills to the table.
               </p>
               <p>
-                If you're ready to take your blockchain project or community to
-                new heights, she is here to help. Trust her to bring her
-                passion, knowledge, and experience to the table, and let's make
-                your vision a reality!
+                If you&apos;re ready to take your blockchain project or
+                community to new heights, she is here to help. Trust her to
+                bring her passion, knowledge, and experience to the table, and
+                let&apos;s make your vision a reality!
               </p>
             </div>
           </div>

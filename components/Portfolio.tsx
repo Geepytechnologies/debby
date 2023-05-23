@@ -16,7 +16,7 @@ const Portfolio = (props: Props) => {
           <img src="/metavists.jfif" />
           <img src="/cyclers.jpeg" />
         </div>
-        <div className="logos-slide flex min-w-full gap-10 p-4">
+        {/* <div className="logos-slide flex min-w-full gap-10 p-4">
           <img src="/cassava.jpeg" />
           <img src="/collector.jpeg" />
           <img src="/despace.jpg" />
@@ -24,7 +24,7 @@ const Portfolio = (props: Props) => {
           <img src="/zoa.jpeg" />
           <img src="/metavists.jfif" />
           <img src="/cyclers.jpeg" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

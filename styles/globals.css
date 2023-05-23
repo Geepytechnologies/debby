@@ -45,3 +45,7 @@
 .logos-slide img {
   height: 150px;
 }
+.contact {
+  outline: none;
+  padding: 3px;
+}

@@ -10,6 +10,7 @@ import Fixed from "@/components/Fixed";
 import Footer from "@/components/Footer";
 import Portfolio from "@/components/Portfolio";
 import Podcast from "@/components/Podcast";
+import Videos from "@/components/Videos";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         {/* <Contact /> */}
         <Fixed />
         <Portfolio />
+        <Videos />
         <Podcast />
         <Contact />
         <Footer />

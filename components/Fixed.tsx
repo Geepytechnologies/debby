@@ -19,8 +19,9 @@ const Fixed: React.FC = () => {
   }, []);
 
   return (
-    <div className="hero w-full h-[500px]" ref={containerRef}>
+    <div className="hero w-full h-[500px] mt-[100px]" ref={containerRef}>
       {/* Your content goes here */}
+      <p>hello</p>
     </div>
   );
 };

@@ -52,13 +52,13 @@ const Header = (props: Props) => {
             transition={{
               duration: 1.5,
             }}
-            className=""
+            className="hidden md:flex"
           >
             <Mysocials />
           </motion.div>
           <ul className="text-gray-300 hidden  md:flex gap-9 text-[20px] items-center justify-center">
             <li>
-              <Link href="#about">About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <Link href="#projects">Portfolio</Link>
@@ -100,7 +100,7 @@ const Header = (props: Props) => {
         >
           <div className="space-y-3 text-white">
             <Link
-              href="#about"
+              href="/about"
               className="flex gap-1 items-center justify-center"
             >
               <p>About</p>

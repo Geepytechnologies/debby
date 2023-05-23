@@ -11,7 +11,7 @@ const Footer = (props: Props) => {
     <div className="bg-dark py-8">
       <Logo />
       {/* newsletter form */}
-      <div className="flex flex-col gap-3 pl-3">
+      <div className="flex flex-col gap-3 pl-3 mt-3">
         <p className="text-light">Subscribe to My Email list</p>
         <input
           type="text"

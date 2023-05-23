@@ -8,6 +8,8 @@ import Logo from "./Logo";
 
 type Props = {};
 
+const youtube = "https://www.youtube.com/@dcryptgirl/videos";
+
 export const Mysocials = () => (
   <>
     <SocialIcon
@@ -25,6 +27,7 @@ export const Mysocials = () => (
       fgColor="gray"
       bgColor="transparent"
     />
+    <SocialIcon url={youtube} fgColor="gray" bgColor="transparent" />
   </>
 );
 

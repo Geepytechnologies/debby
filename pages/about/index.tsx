@@ -10,16 +10,14 @@ const Index = (props: Props) => {
     <>
       <Layout>
         <div className="w-full p-2 flex flex-col items-center">
-          <div className="w-full sm:w-[90%] md:w-[70%]">
+          <div className="w-full sm:w-[90%] md:w-[70%] mt-9">
             <p className="text-center font-mont tracking-wider font-[600] text-gray-500 uppercase">
               About DcryptGirl
             </p>
-            <div className="w-full flex items-center justify-center">
-              <div className="w-[230px] sm:w-[300px] h-[400px]">
-                <img src={"/debby2.jpeg"} alt={""} />
-              </div>
+            <div className="w-full flex items-center justify-center mt-4">
+              <Image src={"/debby2.jpeg"} alt={""} width={400} height={400} />
             </div>
-            <div>
+            <div className="mt-5 p-2">
               <p>
                 <span className="font-[500]">Debora Ezinne Ifegwu</span> is a
                 blockchain enthusiast, influencer, content creator, community

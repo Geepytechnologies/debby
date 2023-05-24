@@ -5,8 +5,10 @@ type Props = {};
 const Portfolio = (props: Props) => {
   return (
     <div>
-      <p>Portfolio</p>
-      <div className="logos max-w-full flex justify-between overflow-hidden   ">
+      <h2 className="text-gray-500 font-[500] py-6 uppercase tracking-wider text-center text-[25px]">
+        Portfolio
+      </h2>
+      <div className="logos bg-gray-50 max-w-full flex justify-between overflow-hidden   ">
         <div className="logos-slide flex   gap-10 p-4 min-w-full">
           <div className="flex flex-col gap-2">
             <img src="/cassava.jpeg" />

@@ -11,8 +11,8 @@ const Footer = (props: Props) => {
     <div className="bg-dark py-8">
       <Logo />
       {/* newsletter form */}
-      <div className="flex flex-col gap-3 pl-3 mt-3">
-        <p className="text-light">Subscribe to My Email list</p>
+      <div className="flex flex-col gap-3 pl-3 mt-5">
+        <p className="text-light">Subscribe to My Newsletter</p>
         <input
           type="text"
           onChange={(e) => setEmail(e.target.value)}
@@ -25,7 +25,7 @@ const Footer = (props: Props) => {
         </div>
       </div>
       {/* socials */}
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center mt-3">
         <Mysocials />
       </div>
       <div className="text-light w-full flex items-center justify-center">

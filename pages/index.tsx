@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Contact from "@/components/Contact";
-import Fixed from "@/components/Fixed";
+import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import Portfolio from "@/components/Portfolio";
 import Podcast from "@/components/Podcast";
@@ -24,10 +24,9 @@ export default function Home() {
       <main className={styles.main}>
         <Header />
         <Hero />
-        {/* <Contact /> */}
-        <Fixed />
-        <Portfolio />
         <Videos />
+        <Features />
+        <Portfolio />
         <Podcast />
         <Contact />
         <Footer />

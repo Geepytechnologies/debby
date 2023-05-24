@@ -1,11 +1,23 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 const Videos = (props: Props) => {
   const youtube = "https://www.youtube.com/@dcryptgirl/videos";
   return (
-    <div>
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+      className="bg-gradient-to-r from-white to-gray-100 pb-8"
+    >
       <div className="w-full p-3 flex items-center justify-center">
         <div className="flex items-center">
           <div className="">
@@ -40,7 +52,7 @@ const Videos = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

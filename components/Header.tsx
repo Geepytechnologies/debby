@@ -41,9 +41,12 @@ const Header = (props: Props) => {
       <header className="sticky bg-[rgb(36,36,36)] top-0 flex flex-col  w-full z-20  px-3 py-4">
         <div className="flex justify-between ">
           <Logo />
-          <motion.div
+          <div className="hidden md:flex">
+            <Mysocials />
+          </div>
+          <motion.ul
             initial={{
-              x: -500,
+              x: 500,
               opacity: 0,
               scale: 0.5,
             }}
@@ -55,11 +58,8 @@ const Header = (props: Props) => {
             transition={{
               duration: 1.5,
             }}
-            className="hidden md:flex"
+            className="text-gray-300 hidden  md:flex gap-9 text-[20px] items-center justify-center"
           >
-            <Mysocials />
-          </motion.div>
-          <ul className="text-gray-300 hidden  md:flex gap-9 text-[20px] items-center justify-center">
             <li>
               <Link href="/about">About</Link>
             </li>
@@ -72,7 +72,7 @@ const Header = (props: Props) => {
             <li>
               <Link href="/blog">Blog</Link>
             </li>
-          </ul>
+          </motion.ul>
           <motion.div
             initial={{
               x: 500,
@@ -97,11 +97,11 @@ const Header = (props: Props) => {
         <div
           className={`  ${
             menu
-              ? "max-h-[200px] overflow-hidden md:hidden h-[200px] py-4 transition-[max-height] duration-500 ease-in-out "
+              ? "max-h-[200px] overflow-hidden md:hidden flex items-center w-full h-[200px] py-4 transition-[max-height] duration-500 ease-in-out "
               : "max-h-[0px] overflow-hidden h-[200px]   transition-[max-height] duration-500 ease-in-out"
           }`}
         >
-          <div className="space-y-3 text-white">
+          <div className="space-y-3 w-full text-white">
             <Link
               href="/about"
               className="flex gap-1 items-center justify-center"

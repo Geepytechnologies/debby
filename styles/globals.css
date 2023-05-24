@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 .hero {
-  background-image: url("/debby1.jpeg");
+  background-image: url("/bgdeb.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
 }
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -20,11 +21,11 @@
   position: relative;
   cursor: pointer;
 }
-/* .logos:before,
+.logos:before,
 .logos:after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 100px;
   height: 100%;
   content: "";
   z-index: 2;
@@ -36,7 +37,7 @@
 .logos:after {
   right: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-} */
+}
 .logos:hover .logos-slide {
   animation-play-state: paused;
 }
@@ -45,6 +46,12 @@
 }
 .logos-slide img {
   height: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+}
+.logos-slide p {
+  font-size: 18px;
+  font-weight: 500;
 }
 .contact {
   outline: none;

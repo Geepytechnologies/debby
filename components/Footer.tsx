@@ -32,7 +32,7 @@ const Footer = (props: Props) => {
         <p>Copyright &#169; {year} Dcryptgirl. All rights reserved.</p>
       </div>
       <div className="text-light w-full flex items-center justify-center mt-3">
-        <p className="italic">
+        <p className="italic text-[12px]">
           Made by{" "}
           <a className="underline" href="https://geepy.vercel.app">
             Geepy

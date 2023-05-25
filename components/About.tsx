@@ -14,7 +14,7 @@ const About = (props: Props) => {
       <h3 className="uppercase tracking-[15px] text-gray-500 text-2xl">
         About
       </h3>
-      <div className="text-base font-mont">
+      <div className="text-base font-mont space-y-8">
         <p className="py-4 font-rob">
           I&apos;m a blockchain enthusiast, influencer, content creator,
           community builder, project manager, and public speaker, all rolled

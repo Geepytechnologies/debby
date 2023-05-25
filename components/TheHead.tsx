@@ -6,16 +6,10 @@ type Props = {};
 const TheHead = (props: Props) => {
   return (
     <Head>
-      <title></title>
+      <title>Dcryptgirl</title>
       <meta name="description" content="" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="" />
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin=""
-      ></link>
+      <link rel="icon" href="/logo1.jpeg" />
     </Head>
   );
 };

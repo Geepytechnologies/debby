@@ -1,7 +1,7 @@
 import React from "react";
-import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { motion } from "framer-motion";
 
 type Inputs = {
   name: string;
@@ -23,7 +23,18 @@ const Contact = (props: Props) => {
     window.location.href = `mailto:contact@dcryptgirl.net?subject=${data.subject}&body=Hi,my name is ${data.name}, ${data.message}`;
   };
   return (
-    <div className=" relative flex flex-col space-y-3 text-center md:text-left max-w-full justify-evenly px-10 py-10 items-center">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1.5,
+      }}
+      className=" relative flex flex-col space-y-3 text-center md:text-left max-w-full justify-evenly px-10 py-10 items-center"
+    >
       <h3 className="uppercase tracking-[15px] text-gray-500 text-2xl">
         Get In Touch
       </h3>
@@ -68,7 +79,7 @@ const Contact = (props: Props) => {
           Submit
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

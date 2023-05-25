@@ -2,13 +2,25 @@ import Contact from "@/components/Contact";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 const Index = (props: Props) => {
+  const router = useRouter();
+
+  const goBack = () => {
+    router.back();
+  };
   return (
     <>
       <Layout>
+        <button
+          onClick={goBack}
+          className="border-2 m-3 border-off text-off font-[500] px-5 py-3"
+        >
+          Back
+        </button>
         <div className="w-full p-2 flex flex-col items-center">
           <div className="w-full sm:w-[90%] md:w-[70%] mt-9">
             <p className="text-center font-mont tracking-wider font-[600] text-gray-500 uppercase">
@@ -17,9 +29,9 @@ const Index = (props: Props) => {
             <div className="w-full flex items-center justify-center mt-4">
               <Image src={"/debby2.jpeg"} alt={""} width={400} height={400} />
             </div>
-            <div className="mt-5 p-2">
+            <div className="mt-5 p-2 space-y-8">
               <p>
-                <span className="font-[500]">Debora Ezinne Ifegwu</span> is a
+                <span className="font-[500]">Deborah Ezinne Ifegwu</span> is a
                 blockchain enthusiast, influencer, content creator, community
                 builder, project manager, and public speaker, all rolled into
                 one!

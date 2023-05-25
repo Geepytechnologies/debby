@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import { AiOutlineClose } from "react-icons/ai";
-import { HiMenuAlt4 } from "react-icons/hi";
+import { BiMenuAltRight } from "react-icons/bi";
 import Link from "next/link";
 import Logo from "./Logo";
 
@@ -58,13 +58,13 @@ const Header = (props: Props) => {
             transition={{
               duration: 1.5,
             }}
-            className="text-gray-300 hidden  md:flex gap-9 text-[20px] items-center justify-center"
+            className="text-gray-300 hidden  md:flex gap-12 text-[20px] items-center justify-center"
           >
             <li>
               <Link href="/about">About</Link>
             </li>
             <li>
-              <Link href="#projects">Portfolio</Link>
+              <Link href="#portfolio">Portfolio</Link>
             </li>
             <li>
               <Link href="#contact">Contact</Link>
@@ -89,7 +89,7 @@ const Header = (props: Props) => {
             }}
             className="flex flex-row md:hidden  text-[30px] font-[500]  text-gray-300 items-center"
           >
-            {!menu && <HiMenuAlt4 onClick={() => togglemenu()} />}
+            {!menu && <BiMenuAltRight onClick={() => togglemenu()} />}
             {menu && <AiOutlineClose onClick={() => togglemenu()} />}
           </motion.div>
         </div>
@@ -101,28 +101,19 @@ const Header = (props: Props) => {
               : "max-h-[0px] overflow-hidden h-[200px]   transition-[max-height] duration-500 ease-in-out"
           }`}
         >
-          <div className="space-y-3 w-full text-white">
-            <Link
-              href="/about"
-              className="flex gap-1 items-center justify-center"
-            >
+          <div className="space-y-3 w-full h-full flex flex-col items-center justify-center text-white">
+            <Link href="/about">
               <p>About</p>
             </Link>
-            <Link
-              href="#projects"
-              className="flex gap-1 items-center justify-center"
-            >
+            <Link href="#portfolio" className="">
               <p>Portfolio</p>
             </Link>
-            <Link
-              href="#contact"
-              className="flex gap-1 items-center justify-center"
-            >
+            <Link href="#contact">
               <p>Contact</p>
             </Link>
-            <div className="flex gap-1 items-center justify-center">
+            <Link href="/blog">
               <p>Blog</p>
-            </div>
+            </Link>
           </div>
         </div>
       </header>

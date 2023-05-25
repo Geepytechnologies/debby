@@ -23,12 +23,14 @@ const Logo = (props: Props) => {
         }}
         className="flex gap-2 items-center cursor-pointer justify-center"
       >
-        <img
+        {/* <img
           src="logo1.jpeg"
           alt="dcryptgirl"
           className="w-[50px] h-[50px]  rounded-full border-2 border-white "
-        />
-        <p className="text-light text-[30px]">Dcryptgirl</p>
+        /> */}
+        <p className="text-light text-[30px] font-vibes tracking-widest">
+          Dcryptgirl
+        </p>
       </motion.div>
     </Link>
   );

@@ -22,6 +22,7 @@ module.exports = {
       danc: ["Dancing Script", "cursive"],
       popp: ["Poppins", "sans-serif"],
       open: ["Open Sans", "sans-serif"],
+      vibes: ["Great Vibes", "cursive"],
     },
   },
   plugins: [],

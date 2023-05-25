@@ -21,11 +21,11 @@ const Hero = (props: Props) => {
   return (
     <div className=" w-full flex items-center py-4 bg-gradient-to-r from-white to-gray-100 pb-8 min-h-[400px]">
       <div className="flex flex-col md:flex-row items-center justify-center h-full">
-        <div className=" pl-4 py-4 flex flex-col gap-3 pr-4 order-2 md:order-1">
+        <div className=" pl-4 py-4 flex flex-col  gap-3 pr-4 order-2 md:order-1">
           <h2 className="text-2xl">Hi, I&apos;m Deborah,</h2>
-          <h1 className="text-5xl lg:text-6xl text-dark font-semibold">
+          <h1 className="text-5xl lg:text-6xl text-dark flex items-center  min-h-[100px] md:min-h-[130px] font-semibold">
             <span className="">{text}</span>
-            <Cursor cursorColor="#eddaa7" />
+            {/* <Cursor cursorColor="#eddaa7" /> */}
           </h1>
           <h3 className="">
             With my expertise in blockchain technology, I have become a go-to
@@ -51,7 +51,7 @@ const Hero = (props: Props) => {
           transition={{
             duration: 1.5,
           }}
-          className="relative w-full bg-gradient-to-l from-white to-gray-50 order-1 md:order-2"
+          className="relative w-full bg-gradient-to-l from-white to-gray-50 flex justify-center order-1 md:order-2"
         >
           <Image
             src="/debbytrans.png"

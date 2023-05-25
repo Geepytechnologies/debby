@@ -76,3 +76,13 @@
   border-radius: 50%;
   transform: scaleY(2);
 }
+
+.skeleton {
+  animation: skeleton 1s ease infinite alternate;
+}
+
+@keyframes skeleton {
+  to {
+    opacity: 0.5;
+  }
+}

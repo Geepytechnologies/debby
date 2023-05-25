@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -26,9 +27,20 @@ const Index = (props: Props) => {
             <p className="text-center font-mont tracking-wider font-[600] text-gray-500 uppercase">
               About DcryptGirl
             </p>
-            <div className="w-full flex items-center justify-center mt-4">
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.5,
+              }}
+              className="w-full flex items-center justify-center mt-4"
+            >
               <Image src={"/debby2.jpeg"} alt={""} width={400} height={400} />
-            </div>
+            </motion.div>
             <div className="mt-5 p-2 space-y-8">
               <p>
                 <span className="font-[500]">Deborah Ezinne Ifegwu</span> is a

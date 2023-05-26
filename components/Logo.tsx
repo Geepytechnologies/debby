@@ -28,7 +28,7 @@ const Logo = (props: Props) => {
           alt="dcryptgirl"
           className="w-[50px] h-[50px]  rounded-full border-2 border-white "
         /> */}
-        <p className="text-light text-[30px] font-vibes tracking-widest">
+        <p className="text-light text-[30px] font-rubik tracking-widest">
           Dcryptgirl
         </p>
       </motion.div>

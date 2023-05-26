@@ -23,6 +23,7 @@ module.exports = {
       popp: ["Poppins", "sans-serif"],
       open: ["Open Sans", "sans-serif"],
       vibes: ["Great Vibes", "cursive"],
+      rubik: ["Rubik", "sans-serif"],
     },
   },
   plugins: [],

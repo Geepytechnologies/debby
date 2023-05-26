@@ -13,17 +13,17 @@ const youtube = "https://www.youtube.com/@dcryptgirl/videos";
 export const Mysocials = () => (
   <>
     <SocialIcon
-      url="https://twitter.com/devgeepy"
+      url="https://twitter.com/dcryptgirll"
       fgColor="gray"
       bgColor="transparent"
     />
     <SocialIcon
-      url="https://www.linkedin.com/in/godspower-enwereuzor-4861571a2"
+      url="https://www.linkedin.com/in/deborah-ifegwu-9717b7237"
       fgColor="gray"
       bgColor="transparent"
     />
     <SocialIcon
-      url="https://instagram.com/devgeepy"
+      url="https://instagram.com/dcryptgirl"
       fgColor="gray"
       bgColor="transparent"
     />

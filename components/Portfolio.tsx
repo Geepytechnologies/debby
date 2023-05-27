@@ -39,7 +39,7 @@ const Portfolio = (props: Props) => {
             <p className="text-center">Cyclers Studio</p>
           </div>
           <div className="flex flex-col gap-2">
-            <img src="/Kwikpik.jpeg" />
+            <img src="/kwikpik.jpeg" />
             <p className="text-center">KwikPik</p>
           </div>
         </div>
@@ -73,19 +73,10 @@ const Portfolio = (props: Props) => {
             <p className="text-center">Cyclers Studio</p>
           </div>
           <div className="flex flex-col gap-2">
-            <img src="/Kwikpik.jpeg" />
+            <img src="/kwikpik.jpeg" />
             <p className="text-center">KwikPik</p>
           </div>
         </div>
-        {/* <div className="logos-slide flex min-w-full gap-10 p-4">
-          <img src="/cassava.jpeg" />
-          <img src="/collector.jpeg" />
-          <img src="/despace.jpg" />
-          <img src="/dojima.jpg" />
-          <img src="/zoa.jpeg" />
-          <img src="/metavists.jfif" />
-          <img src="/cyclers.jpeg" />
-        </div> */}
       </div>
     </div>
   );

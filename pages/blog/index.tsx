@@ -1,12 +1,16 @@
 import Layout from "@/components/Layout";
 import Blogcard from "@/components/blog/Blogcard";
+import Hero from "@/components/blog/Hero";
 import Blogskeleton from "@/components/skeletons/Blogskeleton";
+import { getPosts } from "@/utils";
 import React from "react";
 
 type Props = {};
 
-const Index = (props: Props) => {
-  const isloading = true;
+const Index = ({ posts }: any) => {
+  const isloading = false;
+  const blogs = [1, 2, 3, 4, 5, 6];
+  console.log({ posts: posts });
   return (
     <>
       <Layout>
@@ -14,24 +18,15 @@ const Index = (props: Props) => {
           <Blogskeleton />
         ) : (
           <div>
-            <div>
-              {/* hero header */}
-              <div className="w-full flex items-center justify-center">
-                <div></div>
-              </div>
+            <Hero />
+            <div className="w-full flex items-center justify-center p-3 mt-7">
               {/* blog posts */}
-              <div>
-                <Blogcard
-                  title={""}
-                  excerpt={""}
-                  image={""}
-                  date={""}
-                  author={""}
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+                {posts.map((item: any, index: any) => (
+                  <Blogcard key={index} post={item.node} />
+                ))}
               </div>
             </div>
-            {/* sidebar */}
-            <div></div>
           </div>
         )}
       </Layout>
@@ -40,3 +35,11 @@ const Index = (props: Props) => {
 };
 
 export default Index;
+
+export async function getStaticProps() {
+  const posts = await getPosts();
+
+  return {
+    props: { posts },
+  };
+}

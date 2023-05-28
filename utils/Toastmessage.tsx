@@ -5,7 +5,18 @@ import "react-toastify/dist/ReactToastify.css";
 type Props = {};
 
 export const notify = (err: string) =>
-  toast.error(err, {
+  toast.success(err, {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  });
+export const showWarning = (err: string) =>
+  toast.warning(err, {
     position: "top-center",
     autoClose: 5000,
     hideProgressBar: true,

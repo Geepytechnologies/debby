@@ -52,12 +52,16 @@ export const getPostBySlug = async (slug: string) => {
           slug
         }
         content {
-          raw
+          html
+        }
+        createdAt
+        title
+        featuredImage {
+          url
         }
       }
     }
   `;
   const result = (await request(graphqlAPI, query, { slug })) as any;
-  console.log({ myresult: result });
   return result.post;
 };

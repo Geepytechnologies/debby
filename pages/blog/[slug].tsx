@@ -1,14 +1,17 @@
 import Layout from "@/components/Layout";
 import { getPostBySlug, getPosts } from "@/utils";
 import { useRouter } from "next/router";
+import DOMPurify from "isomorphic-dompurify";
+import moment from "moment";
 
 const Index = ({ post }: any) => {
-  console.log({ single: post });
   const router = useRouter();
 
   const goBack = () => {
     router.back();
   };
+  const { author, categories, content, featuredImage, title, createdAt } = post;
+  const sanitizedHtml = DOMPurify.sanitize(content.html);
   return (
     <>
       <Layout>
@@ -18,14 +21,24 @@ const Index = ({ post }: any) => {
         >
           Back
         </button>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center p-4">
           <div className="mb-8">
-            <div className="w-[300px] sm:w-[400px] md:w-[600px] bg-[red]">
-              <img src={"/zoa.jpeg"} alt="" className="w-full" />
+            <h3 className="text-off font-[500]">{categories[0].name}</h3>
+            <h1 className="font-[700] text-[30px]">{title}</h1>
+            <div className="flex gap-3 mt-3">
+              <h2 className="font-[500] font-rubik italic lowercase tracking-wider">
+                by {author.name}
+              </h2>
+              <h2>{moment(createdAt).fromNow()}</h2>
             </div>
-            <h1>Title</h1>
-            <h2>Published</h2>
-            <div>blog post</div>
+            <div className="w-full flex items-center justify-center my-6">
+              <div className="w-[300px] sm:w-[400px] md:w-[700px] lg:w-[1000px] ">
+                <img src={featuredImage.url} alt="" className="w-full" />
+              </div>
+            </div>
+            <div className="content-wrapper">
+              <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+            </div>
           </div>
         </div>
       </Layout>

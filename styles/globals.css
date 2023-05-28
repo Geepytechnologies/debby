@@ -86,3 +86,7 @@
     opacity: 0.5;
   }
 }
+
+.content-wrapper p {
+  margin: 10px 0px;
+}

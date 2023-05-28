@@ -9,8 +9,10 @@ type Props = {};
 
 const Index = ({ posts }: any) => {
   const isloading = false;
-  const blogs = [1, 2, 3, 4, 5, 6];
-  console.log({ posts: posts });
+  const gridColsClass =
+    posts.length <= 2
+      ? "grid-cols-1 sm:grid-cols-2"
+      : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
   return (
     <>
       <Layout>
@@ -21,7 +23,9 @@ const Index = ({ posts }: any) => {
             <Hero />
             <div className="w-full flex items-center justify-center p-3 mt-7">
               {/* blog posts */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+              <div
+                className={`grid p-4 justify-center ${gridColsClass}  gap-5`}
+              >
                 {posts.map((item: any, index: any) => (
                   <Blogcard key={index} post={item.node} />
                 ))}

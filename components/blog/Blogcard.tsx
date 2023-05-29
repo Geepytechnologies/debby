@@ -33,7 +33,7 @@ const Blogcard = ({ post }: { post: Post }) => {
       >
         <Image
           src={post?.featuredImage.url}
-          alt=" "
+          alt={post?.title}
           height={300}
           width={300}
           className="shadow-l"
@@ -44,7 +44,7 @@ const Blogcard = ({ post }: { post: Post }) => {
         <Link href={`/blog/${post.slug}`}>
           <h1 className="font-[600] text-2xl text-center">{post?.title}</h1>
         </Link>
-        <h2>{post?.excerpt}</h2>
+        <h2 className="text-center">{post?.excerpt}</h2>
       </div>
     </div>
   );

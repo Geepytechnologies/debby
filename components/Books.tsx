@@ -8,7 +8,7 @@ type Props = {};
 const Books = (props: Props) => {
   return (
     <div className="w-full flex flex-col items-center my-5 justify-center">
-      <h2 className="text-center font-mont text-lg p-2 text-gray-500 tracking-wider">
+      <h2 className="text-center font-mont font-[600] text-xl p-2 text-gray-500 ">
         Best Selling Books
       </h2>
       <div className="w-full p-2 md:w-[80%] lg:w-[60%] flex items-center justify-center">

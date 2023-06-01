@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { Mysocials } from "./Header";
 import Toastmessage, { notify, showWarning } from "@/utils/Toastmessage";
+import { createEmailSubscription } from "@/utils";
 
 type Props = {};
 
@@ -12,38 +13,14 @@ const Footer = (props: Props) => {
   const graphqlAPI = process.env.NEXT_PUBLIC_HYGRAPH || "";
   const token = process.env.NEXT_PUBLIC_HYGRAPH_API || "";
 
-  const subscribe = () => {
-    try {
-      window.location.href = `mailto:contact@dcryptgirl.net?subject=${encodeURIComponent(
-        "Subscription to your Newsletter"
-      )}&body=${encodeURIComponent(
-        `This user, ${email}, has subscribed to your newsletter.`
-      )}`;
-      notify("Subscription Successful");
-    } catch (error) {}
-  };
-
   const makeRequest = async () => {
-    const variables = { email };
-    const mutation = `
-  mutation CreateEmailSubscription($email: String!) {
-    createEmailSubscription(data: { email: $email }) {
-      email
-    }
-  }
-`;
     try {
-      const response = await fetch(graphqlAPI, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ query: mutation, variables }),
-      });
-
-      const { data } = await response.json();
-      console.log(data); // Handle the received data
+      const response = await createEmailSubscription(email);
+      if (response) {
+        notify(
+          "Thank You For Subscribing" + "" + String.fromCodePoint(0x1f60a)
+        );
+      }
     } catch (error) {
       console.error(error); // Handle any errors
     }
@@ -78,6 +55,7 @@ const Footer = (props: Props) => {
         <form onSubmit={handleSubmit} className="space-y-2">
           <input
             type="email"
+            placeholder="Email"
             onChange={handleEmailChange}
             className="outline-0 bg-white border-0 p-2 rounded-sm w-[250px]"
           />
@@ -85,7 +63,7 @@ const Footer = (props: Props) => {
             <button
               type="submit"
               disabled={!isValidEmail}
-              className={`border-2 tracking-wider border-off text-off py-2 px-3 ${
+              className={`border-2 tracking-wider border-off mt-3 text-off py-2 px-3 ${
                 !isValidEmail && "opacity-10"
               }`}
             >

@@ -70,7 +70,7 @@ const Contact = (props: Props) => {
         <textarea
           {...register("message")}
           placeholder="Message"
-          className="contact"
+          className="contact min-h-[100px]"
         />
         <button
           type="submit"

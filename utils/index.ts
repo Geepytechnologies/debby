@@ -65,3 +65,15 @@ export const getPostBySlug = async (slug: string) => {
   const result = (await request(graphqlAPI, query, { slug })) as any;
   return result.post;
 };
+
+export const createEmailSubscription = async (email: string) => {
+  const query = gql`
+    mutation CreateEmailSubscription($email: String!) {
+      createEmailSubscription(data: { email: $email }) {
+        email
+      }
+    }
+  `;
+  const result = (await request(graphqlAPI, query, { email })) as any;
+  return result;
+};

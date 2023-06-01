@@ -51,26 +51,16 @@ const Hero = (props: Props) => {
           transition={{
             duration: 1.5,
           }}
-          className="relative w-full bg-gradient-to-l from-white to-gray-50 flex justify-center order-1 md:order-2"
+          className="relative w-full flex justify-center order-1 md:order-2"
         >
-          <Image
+          {/* <Image
             src="/debbytrans.png"
             alt="Deborah Ifegwu(Dcryptgirl)"
-            width={400}
-            height={400}
+            width={200}
+            height={200}
             priority
           />
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute bottom-0 bg-gradient-to-r from-white to-gray-100"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#fff"
-              fill-opacity="1"
-              d="M0,256L80,229.3C160,203,320,149,480,144C640,139,800,181,960,176C1120,171,1280,117,1360,90.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-            ></path>
-          </svg> */}
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 319"
@@ -88,7 +78,8 @@ const Hero = (props: Props) => {
               fillOpacity="1"
               d="M0,256L80,229.3C160,203,320,149,480,144C640,139,800,181,960,176C1120,171,1280,117,1360,90.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
             ></path>
-          </svg>
+          </svg> */}
+          <div className="bg-[url('/debby1.jpeg')] bg-cover w-[300px] h-[300px] rounded-full border-[white] border-[5px] shadow-xl"></div>
         </motion.div>
       </div>
     </div>
